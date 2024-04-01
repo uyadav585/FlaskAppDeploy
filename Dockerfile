@@ -5,6 +5,7 @@ RUN pip install --upgrade pip
 WORKDIR /app
 COPY . /app
 
+RUN pip install gunicorn
 RUN python -m pip install -r requirements.txt
 
 EXPOSE 5000
